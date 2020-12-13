@@ -1,2 +1,8 @@
 import EDD from "../src"
-console.log(EDD)
+var m
+console.log(
+EDD(m,{
+    notNil:true,
+    notEmpty:true,
+    type:[String]
+},"fdasf"))
