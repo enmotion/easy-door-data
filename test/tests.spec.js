@@ -5,12 +5,11 @@ describe('Easy-data-door 测试',function(){
     describe("校验数据不能为 Null,undefined",function(){
         it("不设规则时 = undefined，true",function(){
             var m;
-            console.log(m)
             assert.equal(EDD(m),true)
         })
         it("规则不允许为 Null,undefined =undefined，false",function(){
             var m;
-            assert.equal(EDD(m,{notNil:true}),false)
+            assert.equal(EDD(m,{notNil:true},"props m"),false)
         })
         it("规则允许为 Null,undefined =undefined，true",function(){
             var m;

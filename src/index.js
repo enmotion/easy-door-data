@@ -16,7 +16,6 @@ function valiData(data,rule,prefix){
     }
     // 如果数据为格式检查
     var type = rule.type ? rule.type.constructor == Function? [rule.type] : rule.type :[String,Number,Object,Array,Boolean,Function];
-    console.log(data, type)
     if(!R.isNil(data) && type.indexOf(data.constructor)<0){
         console.error("ERROR: type check failed Expected ["+ R.pluck("name")(type) +"] got "+data.constructor.name);
         return false;
